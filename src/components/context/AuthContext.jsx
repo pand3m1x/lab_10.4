@@ -1,9 +1,9 @@
-import { createContext, useState, ReactNode } from "react";
+import { createContext, useState } from "react";
 
 
 const AuthContext = createContext(null);
 
-export function AuthContextProvider({ children, ReactNode }) {
+export function AuthContextProvider({ children}) {
   // const Test=({})=>
   const [isAuth, setAuth] = useState(false);
 
@@ -21,3 +21,5 @@ export function AuthContextProvider({ children, ReactNode }) {
     </AuthContext.Provider>
   );
 }
+
+export default AuthContext;

@@ -20,4 +20,4 @@ const Blog = () => {
 
 export default Blog;
 
-//<p>{post.content}</p>
+//<p>{post.content}</p> // This should populate when going to the blog detail page?

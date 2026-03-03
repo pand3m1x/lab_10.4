@@ -14,6 +14,7 @@ const BlogDetail = () => {
 
   return (
     <>
+      <div style={{border:"2px solid yellow"}}>
       {data ? (
         <div>
           <h5>{data.title}</h5>
@@ -23,6 +24,7 @@ const BlogDetail = () => {
       ) : (
         <h2>404- Page Not Found</h2>
       )}
+      </div>
     </>
   );
 };
