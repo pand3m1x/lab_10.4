@@ -1,20 +1,16 @@
-import * as React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { posts } from "../mockData/data";
 
 const Blog = () => {
   return (
     <>
-      <ul>
+      <ul style={{listStyle:"none"}}>
         {posts.map((post) => (
-          <Link key={post.id} to={"/blog/" + post.slug}>
-            <li>
-              <div>
-                <h5>{post.title}</h5>
-                <p>{post.content}</p>
-              </div>
-            </li>
-          </Link>
+          <li key={post.id} style={{border:"2px solid blue",borderRadius:"10px",marginRight:"50px"}}>
+            <Link to={"/blog/" + post.slug}>
+                  <h5>{post.title}</h5>
+            </Link>
+          </li>
         ))}
       </ul>
     </>
@@ -22,3 +18,5 @@ const Blog = () => {
 };
 
 export default Blog;
+
+//<p>{post.content}</p>

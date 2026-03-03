@@ -18,13 +18,13 @@ const BlogDetail = () => {
 
   return (
     <>
-      {data ? (
+      {data (
         <div>
           <h5>{data?.title}</h5>
           <p>{data?.slug}</p>
           <p>{data?.content}</p>
         </div>
-      ) : (
+      )  (
         <h2>404- Page Not Found</h2>
       )}
     </>
