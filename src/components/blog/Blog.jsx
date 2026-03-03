@@ -4,9 +4,10 @@ import { posts } from "../mockData/data";
 const Blog = () => {
   return (
     <>
+    <h2>Blog Posts:</h2>
       <ul style={{listStyle:"none"}}>
         {posts.map((post) => (
-          <li key={post.id} style={{border:"2px solid blue",borderRadius:"10px",marginRight:"50px"}}>
+          <li key={post.id} style={{border:"2px solid blue",borderRadius:"10px",marginRight:"50px",marginBottom:"20px"}}>
             <Link to={"/blog/" + post.slug}>
                   <h5>{post.title}</h5>
             </Link>

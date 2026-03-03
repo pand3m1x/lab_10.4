@@ -1,16 +1,12 @@
-import * as React from "react";
-import { useParams } from "react-router";
+import React from "react";
+import { useEffect } from 'react';
+import { useParams } from "react-router-dom";
 import { posts } from "../mockData/data";
 
 const BlogDetail = () => {
   const { slug } = useParams();
 
-  const [data, setData] = React.useState<{
-    id,
-    slug,
-    title,
-    content,
-  };
+  const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
     setData(posts.find((item) => item.slug === slug));
@@ -18,13 +14,13 @@ const BlogDetail = () => {
 
   return (
     <>
-      {data (
+      {data ? (
         <div>
-          <h5>{data?.title}</h5>
-          <p>{data?.slug}</p>
-          <p>{data?.content}</p>
+          <h5>{data.title}</h5>
+          <p>{data.slug}</p>
+          <p>{data.content}</p>
         </div>
-      )  (
+      ) : (
         <h2>404- Page Not Found</h2>
       )}
     </>
